@@ -1,0 +1,130 @@
+
+* {
+  font-family: Roboto;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  font-weight: 400;
+}
+
+nav input#menu-toggle {
+  display: none;
+ }
+
+@media (max-width: 575px) {
+  nav {
+    position: fixed;
+    margin-top: 1rem;
+  }
+
+  nav ul {
+    display: none;
+    background-color: #fff;
+  }
+
+  nav ul li {
+    text-align: left;
+    margin: 1rem;
+    text-decoration: none;
+  }
+
+  nav ul li a {
+    text-decoration: none;
+    color: black;
+  }
+  nav label[for="menu-toggle"] {
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
+  }
+
+  nav label[for="menu-toggle"] div.menu-hamburger {
+    border: 1px solid #fff;
+    width: 35px;
+    height: 15px;
+    cursor: pointer;
+
+  }
+  nav label[for="menu-toggle"] div.menu-hamburger span.hamburger {
+    position: relative;
+    display: block;
+    background-color: black;
+    width: 30px;
+    height: 2px;
+    margin-bottom: 5rem;
+  }
+  nav label[for="menu-toggle"] div.menu-hamburger span.hamburger:before,
+  nav label[for="menu-toggle"] div.menu-hamburger span.hamburger:after {
+    position: absolute;
+    display: block;
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    content: "";
+  }
+  nav label[for="menu-toggle"] div.menu-hamburger span.hamburger:before {
+    top: -10px;
+  }
+  nav label[for="menu-toggle"] div.menu-hamburger span.hamburger:after {
+    bottom: -10px;
+  }
+  nav input:checked ~ ul {
+    display: block;
+    animation: fade-in 1s;
+  }
+  nav
+  input:checked
+  ~ label[for="menu-toggle"]
+  div.menu-hamburger
+  span.hamburger {
+    transform: rotate(45deg);
+    transition: 0.5s;
+  }
+nav
+input:checked
+~ label[for="menu-toggle"]
+div.menu-hamburger
+span.hamburger:before,
+nav
+input:checked
+~ label[for="menu-toggle"]
+div.menu-hamburger
+ span.hamburger:after {
+ transform: rotate(90deg);
+ transition: 0.5s;
+ }
+ nav
+ input:checked
+ ~ label[for="menu-toggle"]
+ div.menu-hamburger
+ span.hamburger:before {
+ top: 0px;
+ }
+ nav
+ input:checked
+ ~ label[for="menu-toggle"]
+ div.menu-hamburger
+ span.hamburger:after {
+ bottom: 0px;
+ }
+ @keyframes fade-in {
+ from {
+ opacity: 0;
+ }
+ to {
+ opacity: 1;
+ }
+ }
+ @keyframes fade-out {
+ from {
+ opacity: 1;
+ }
+ to {
+ opacity: 0;
+ }
+ }
+}
+
+
+

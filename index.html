@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Formulário</title>
+  <link rel="stylesheet" href="/css/menu.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <input id="menu-toggle" type="checkbox" />
+      <label for="menu-toggle">
+        <div class="menu-hamburger">
+          <span class="hamburger"></span>
+        </div>
+      </label>
+      <ul>
+        <li>
+          <a href="index.html">Formulário</a>
+        </li>
+        <li>
+          <a href="tabela.html">Tabela</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <main class="content">
+    <form method="POST" action="" enctype="multipart/form-data">
+      <fieldset>
+        <legend>Contato</legend>
+        <div>
+          <label for="nome">Nome: </label>
+          <input type="text" name="nome" id="nome" placeholder="José" />
+        </div>
+        <div>
+          <label for="email">Email: </label>
+          <input type="text" name="email" id="email" placeholder="jose@jose.com.br" />
+        </div>
+        <label for="masculino">Masculino</label>
+        <input type="radio" name="sexo" value="masculino" />
+        <label for="feminino">Feminino</label>
+        <input type="radio" name="sexo" value="feminino" /><br />
+        <div>
+          <label for="Estado">Estado/Cidade</label>
+          <select name="Estado/Cidade" id="Estado" required>
+            <option> </option>
+            <option value="Sp">São Paulo</option>
+            <option value="Rj">Rio de Janeiro</option>
+            <option value="Mg">Minas Gerais</option>
+          </select>
+          <input type="text" required placeholder="Informe a cidade" />
+        </div>
+        <label for="arquivo">Selecione um Arquivo</label>
+        <input type="file" name="arquivo" /><br />
+        <label for="sugestao">Sugestão:</label> <br />
+        <textarea name="mensagem"></textarea>
+        <br />
+        <input type="image" src="./botao-enviar-dados.jpg" /><br />
+</body>
+
+</html>
